@@ -16,6 +16,24 @@ module battery_18650(center=false) {
 }
 
 
+// 18500
+height_18500 = 49.8; // mm
+diameter_18500 = 18.3; // mm
+
+module battery_18500(center=false) {
+  cylinder(h=height_18500, d=diameter_18500, center=center);
+}
+
+
+// 18350
+height_18350 = 35; // mm
+diameter_18350 = 18; // mm
+
+module battery_18350(center=false) {
+  cylinder(h=height_18350, d=diameter_18350, center=center);
+}
+
+
 // AA
 height_AA = 50.5; // mm
 diameter_AA = 14.5; // mm
@@ -57,3 +75,9 @@ translate([60, 0, 0])
 
 translate([90, 0, 0])
   battery_9v(true);
+
+translate([120, 0, 0])
+  battery_18500(true);
+
+translate([150, 0, 0])
+  battery_18350(true);
